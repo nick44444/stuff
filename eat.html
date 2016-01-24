@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="en">
+<meta charset = utf-8>
+<head><?php
+include('heading1.html');
+?>
+<title>Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<!-- JQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(function(){
+    $('[type=checkbox]').click(function ()
+    {
+       var checkedChbx = $('[type=checkbox]:checked');
+       if (checkedChbx.length > 0)
+        {
+            $('#brick').show();
+            $('#order').show();
+        }
+        else
+        {
+           $('#brick').hide();
+           $('#order').hide();
+        }
+
+})
+});
+</script>
+<link rel="icon" href="http://www.nothingserious.co.uk/img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.nothingserious.co.uk/img/favicon.ico" type="image/x-icon" />
+<style>
+.oMiddle {
+text-align: -webkit-center;
+clear: left;
+margin-bottom: 5px;
+//margin-top: 160px;
+width: 100%;
+}
+#order {
+display: none;
+//width: 100%;
+font-size: 27px;
+width: 30%;
+text-align: -webkit-center;
+background-color: #66d8ff;
+color: #002633;
+border-style: solid;
+border-width: 3px;
+border-color: #e5e5ff;
+border-radius: 5px;
+z-index: 20;
+position: fixed;
+top: 250px;
+left: 34.6%;
+padding-top: 15px;
+padding-bottom: 15px;
+cursor: pointer;
+box-shadow: 1px 1px 6px #002533;
+}
+
+#order:hover {
+background-color: #4d4dff;
+color: #eeeeee;
+}
+
+body {
+font-family: helvetica;
+}
+
+p {
+-webkit-margin-before: 5px;
+-webkit-margin-after: 5px;
+}
+
+.titleoMenu {
+width: 100%;
+text-align: -webkit-center;
+//float: left;
+clear: left;
+padding-top: 2px;
+padding-bottom: 0;
+font-family: 'Great Vibes', cursive;
+font-size: 40px;
+}
+
+.titleo {
+width: 100%;
+text-align: -webkit-center;
+//float: left;
+clear: left;
+padding-top: 5px;
+padding-bottom: 5px;
+font-family: 'Great Vibes', cursive;
+font-size: 30px;
+}
+
+#contains {
+border-color: #000000;
+border-width: 1px;
+border-style: solid;
+background-color: #ffffb3;
+margin-top: 5px;
+margin-left: 17%;
+margin-right: 17%;
+margin-bottom: 25px;
+padding-bottom: 17px;
+text-align: -webkit-center;
+}
+
+.food1 {
+margin-top: 3px;
+margin-bottom: 3px;
+margin-left: 10px;
+padding: none;
+width: 24%;
+float: left;
+clear: left;
+text-align: left;
+}
+.price1 {
+margin-top: 3px;
+margin-bottom: 3px;
+//margin-right: 5px;
+padding: none;
+width: 24%;
+float: left;
+text-align: right;
+}
+.food2 {
+margin-top: 3px;
+margin-bottom: 3px;
+margin-left: 10px;
+padding: none;
+width: 24%;
+float: left;
+text-align: left;
+}
+.price2 {
+margin-top: 3px;
+margin-bottom: 3px;
+//margin-right: 5px;
+padding: none;
+width: 24%;
+float: left;
+text-align: right;
+}
+.foodmob1, .foodmob2, #drmob1, #drmob2, #drmob3, #drmob4, #drmob5, #drmob6 {
+display: none;
+}
+#selmob1, #selmob2, #selmob3, #selmob4, #selmob5, #selmob6 {
+display: none;
+}
+#starty, #begin, #entree, #afters, #drinks, #begin2, #entree2, #drinkz {
+width: 100%;
+text-align: -webkit-center;
+}
+#entree2, #dessertz, #drinkz, #drinks {
+/* clear: left; */
+}
+#receipt {
+color: #9200b3;
+background-color: #ffffff;
+position: fixed;
+top: 10px;
+width: 40%;
+z-index: 10;
+border-width: 1px;
+border-style: solid;
+border-color: #000000;
+display: none;
+text-align: -webkit-center;
+margin-left: 30%;
+//margin-right: 15%;
+margin-top: 10px;
+font-size: 20px;
+font-family: 'VT323';
+}
+#dishList {
+text-align: left;
+float: left;
+margin-left: 10px;
+z-index: 50;
+width: 40%;
+}
+#priceList {
+float: right;
+text-align: right;
+margin-right: 10px;
+z-index: 50;
+width: 40%;
+}
+#priceTotal {
+z-index: 50;
+width: 100%;
+float: right;
+text-align: right;
+margin-top: 5px;
+margin-right: 10px;
+}
+#thanks, #shop {
+font-size: 30px;
+text-align: -webkit-center;
+line-height: 30px;
+margin-bottom: 3px;
+margin-top: 1px;
+clear: left;
+}
+#shop {
+margin-bottom: 3px;
+}
+#thanks {
+margin-bottom: 0;
+}
+#sel1, #sel2, #sel3, #sel4, #sel5, #sel6 {
+display: none;
+}
+#sel1 {
+float: left;
+margin-left: 1%;
+margin-right: 36%;
+}
+#sel2 {
+float: left;
+margin-left: 1%;
+}
+#sel3 {
+float: left;
+margin-left: 1%;
+//margin-right: 30%;
+}
+#sel4 {
+float: left;
+margin-left: 4px;
+//margin-right: 32%;
+}
+#sel5 {
+float: left;
+margin-left: 1%;
+//margin-right: 30%;
+//margin-bottom: 5px;
+}
+#sel6 {
+float: left;
+margin-left: 4px;
+//margin-bottom: 5px;
+}
+#del1, #del2, #del3, #del4, #del5, #del6 {
+float: left;
+margin-left: 4px;
+margin-right: 5px;
+display: none;
+}
+#brick {
+display: none;
+width: 100%;
+margin-top: 110px;
+height: 10px;
+}
+#date {
+
+}
+.forMob {
+//display: none;
+}
+#overlay {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+text-align: -webkit-center;
+background-image: url(img/opaque.png);
+z-index: 5;
+display: none;
+}
+
+#area1, #area3, #area5 {
+display: none;
+float: left;
+width: 40%;
+margin-left: 1%;
+}
+#area2,#area4, #area6 {
+display: none;
+float: right;
+width: 50%;
+margin-left: 1px;
+}
+
+#close {
+font-size: 19px;
+margin-top: 2px;
+margin-right: 5px;
+margin-bottom: 4px;
+cursor: pointer;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) and (orientation : portrait){
+#contains {
+margin-left: 5%;
+margin-right: 5%;
+padding-bottom: 27px;
+}
+
+#order {
+text-align: -webkit-center;
+width: 50%;
+top: 200px;
+float: left;
+margin-left: -10%;
+padding-top: 10px;
+padding-bottom: 10px;
+box-shadow: 2px 2px 5px #002533;
+}
+
+.food1, .food2 {
+width: 70%;
+}
+#dr1, #dr2, #dr3, #dr4, #dr5, #dr6 {
+display: none;
+}
+#drmob1, #drmob2, #drmob3, #drmob4, #drmob5, #drmob6 {
+display: inline;
+}
+#selmob1, #selmob2, #selmob3, #selmob4, #selmob5, #selmob6 {
+display: none;
+float: left;
+margin-left: 4.2%;
+}
+#sel1, #sel2, #sel3, #sel4, #sel5, #sel6 {
+display: none;
+}
+#area1 {
+display: none;
+}
+.price1, .price2 {
+width: 20%;
+float: right;
+margin-right: 10px;
+}
+#sel1 {
+float: left;
+margin-left: 14px;
+margin-right: 36%;
+}
+#sel2 {
+float: right;
+margin-right: 34.8%;
+}
+#sel3 {
+float: left;
+margin-left: 14px;
+margin-right: 30%;
+}
+#sel4 {
+float: right;
+margin-right: 32%;
+}
+#sel5 {
+float: left;
+margin-left: 14px;
+margin-right: 30%;
+}
+#sel6 {
+float: right;
+margin-right: 34%;
+}
+#receipt {
+color: #9200b3;
+background-color: #ffffff;
+position: absolute;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+-webkit-transform: translateZ(0);
+margin: 0 auto;
+//height: 97.7%;
+//top: 0;left: 0;
+width: 97.8%;
+z-index: 10;
+border-width: 1px;
+border-style: solid;
+border-color: #000000;
+display: none;
+text-align: -webkit-center;
+margin-left: 0.78%;
+//margin-right: 5%;
+margin-top: 10px;
+font-size: 20px;
+font-family: 'VT323';
+}
+#thanks, #shop {
+font-size: 20px;
+}
+#close {
+font-size: 12px;
+margin-top: 0;
+margin-right: 5px;
+margin-bottom: 8px;
+}
+#dishList {
+font-size: 15px;
+width: 70%;
+}
+#priceList {
+font-size: 15px;
+width: 20%;
+}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) and (orientation : landscape){
+#contains {
+margin-left: 5%;
+margin-right: 5%;
+}
+
+#order {
+text-align: -webkit-center;
+width: 50%;
+float: left;
+top: 150px;
+margin-left: -10%;
+padding-top: 10px;
+padding-bottom: 10px;
+box-shadow: 2px 2px 5px #002533;
+}
+
+#close {
+font-size: 14px;
+margin-top: 0;
+margin-right: 5px;
+margin-bottom: 8px;
+}
+
+.food1, .food2 {
+width: 70%;
+}
+#dr1, #dr2, #dr3, #dr4, #dr5, #dr6 {
+display: none;
+}
+#drmob1, #drmob2, #drmob3, #drmob4, #drmob5, #drmob6 {
+display: inline;
+}
+#selmob1, #selmob2, #selmob3, #selmob4, #selmob5, #selmob6 {
+display: none;
+float: left;
+width: 25%;
+}
+.price1, .price2 {
+width: 20%;
+float: right;
+margin-right: 10px;
+}
+#sel1 {
+float: left;
+margin-left: 14px;
+margin-right: 36%;
+}
+#sel2 {
+float: right;
+margin-right: 34.8%;
+}
+#sel3 {
+float: left;
+margin-left: 14px;
+margin-right: 30%;
+}
+#sel4 {
+float: right;
+margin-right: 32%;
+}
+#sel5 {
+float: left;
+margin-left: 14px;
+margin-right: 30%;
+}
+#sel6 {
+float: right;
+margin-right: 34%;
+}
+
+#receipt {
+color: #9200b3;
+background-color: #ffffff;
+position: absolute;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+-webkit-transform: translateZ(0);
+margin: 0 auto;
+//height: 97.7%;
+//top: 0;left: 0;
+width: 98.4%;
+z-index: 10;
+border-width: 1px;
+border-style: solid;
+border-color: #000000;
+display: none;
+text-align: -webkit-center;
+margin-left: 0.65%;
+//margin-right: 5%;
+margin-top: 10px;
+font-size: 20px;
+font-family: 'VT323';
+}
+#dishList {
+font-size: 15px;
+line-height: 16px;
+width: 70%;
+}
+#priceList {
+font-size: 18px;
+line-height: 19px;
+width: 20%;
+}
+
+}
+</style>
+<script>
+function datey(){
+hz = "";
+gz = "";
+dayz = "";
+nz = "";
+a1 = new Date();
+
+v1 = a1.getDate();
+v3 = (a1.getMonth() + 1);
+v4 = a1.getFullYear();
+v5 = a1.getHours();
+v6 = a1.getMinutes();
+
+if(v1<10){
+dayz = 0;
+}
+
+if(v3<10){
+hz = 0;
+}
+
+if(v5<10){
+nz = 0;
+}
+
+if(v6<10){
+gz = 0;
+}
+
+document.getElementById("date").innerHTML = dayz + v1 + "/" + hz + v3 + "/" + v4 + " " + nz + v5 + ":" + gz + v6;
+}
+</script>
+<script>
+theDish = new Array();
+thePrice = new Array();
+</script>
+<script>
+function bisp(){
+sta = "";
+starter = document.getElementById("starty").elements;
+for(i=0;i<starter.length;i++){
+if(starter[i].checked){
+theDish.push(starter[i].name);
+thePrice.push(starter[i].value);
+}
+}
+}
+
+</script>
+<script>
+function bosp(){
+
+main = document.getElementById("mainz").elements;
+for(i=0;i<main.length;i++){
+if(main[i].checked){
+theDish.push(main[i].name);
+thePrice.push(main[i].value);
+}
+}
+}
+</script>
+<script>
+function basp(){
+
+desserto = document.getElementById("dessertz").elements;
+for(o=0;o<desserto.length;o++){
+if(desserto[o].checked){
+theDish.push(desserto[o].name);
+thePrice.push(desserto[o].value);
+}
+
+
+}
+}
+
+</script>
+
+<script>
+function drinko(){
+drinky = document.getElementsByClassName("box");
+
+if(drinky[28].checked){
+
+dro = document.getElementById("sel1");
+
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[29].checked){
+
+dro = document.getElementById("selmob1");
+
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+
+if(drinky[30].checked){
+
+dro = document.getElementById("sel2");
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[31].checked){
+
+dro = document.getElementById("selmob2");
+
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[32].checked){
+
+dro = document.getElementById("sel3");
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[33].checked){
+
+dro = document.getElementById("selmob3");
+
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+
+if(drinky[34].checked){
+
+dro = document.getElementById("sel4");
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[35].checked){
+
+dro = document.getElementById("selmob4");
+
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[36].checked){
+
+dro = document.getElementById("sel5");
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[37].checked){
+
+dro = document.getElementById("selmob5");
+
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[38].checked){
+
+dro = document.getElementById("sel6");
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+if(drinky[39].checked){
+
+dro = document.getElementById("selmob6");
+
+namey = dro.options[dro.selectedIndex].label;
+pricey = dro.options[dro.selectedIndex].value;
+
+theDish.push(namey);
+thePrice.push(pricey);
+}
+
+}
+</script>
+
+<script>
+function totally(){
+b = "";
+q = "";
+
+for(n=0;n<theDish.length;n++){
+b += theDish[n] + "<br>";
+}
+for(t=0;t<thePrice.length;t++){
+q += "&#163;" + thePrice[t] + "<br>";
+}
+total = 0;
+for(g=0;g<thePrice.length;g++){
+total += +thePrice[g];
+}
+document.getElementById("receipt").style.display = "block";
+document.getElementById("order").style.display = "none";
+document.getElementById("priceTotal").innerHTML = "<b>" + "TOTAL: " + "&#163;" +  total.toFixed(2) + "</b>";
+document.getElementById("dishList").innerHTML = b;
+document.getElementById("priceList").innerHTML = q;
+
+}
+</script>
+
+<script>
+function listy(boxId,droppo,area){
+if(boxId.checked){
+document.getElementById(droppo.id).style.display = "block";
+document.getElementById(area.id).style.display = "block";
+
+} else {
+document.getElementById(droppo.id).style.display = "none";
+document.getElementById(area.id).style.display = "none";
+}
+}
+</script>
+<script>
+function topLoader(){
+window.scrollTo(0,0);
+document.getElementById("overlay").style.display = "block";
+}
+</script>
+
+<script>
+function closey(){
+location.reload();
+}
+</script>
+
+</head>
+
+<body>
+<br><br><br>
+
+<!-- real thing starts below -->
+
+<div id="contains">
+<div class="titleoMenu"><b>Menu</b></div>
+<p class="titleo"><b>Hors d'Oeuvres:</b></p>
+
+<form id="starty">
+<div class="food1"><input type="checkbox" class="box" id="s1" name="Mussels in gravy" value=9.99 />Mussels in gravy</div>
+<div class="price1">&#163;9.99</div>
+<div class="food2"><input class="box" type="checkbox" id="s2" name="Mushrooms in gravy" value=8.50 " />Mushrooms in gravy</div>
+<div class="price2">&#163;8.50</div>
+
+<div class="food1"><input type="checkbox" class="box" id="s3" name="Bread in gravy" value=9.50 />Bread in gravy</div>
+<div class="price1">&#163;9.50</div>
+<div class="food2"><input class="box" class="box" type="checkbox" id="s4" name="Solo gravy" value=5.99 />Solo gravy</div>
+<div class="price2">&#163;5.99</div>
+
+<div class="food1"><input type="checkbox" class="box" id="s5" name="Surprise pie (plain)" value=6.99 />Surprise pie</div>
+<div class="price1">&#163;6.99</div>
+<div class="food2"><input class="box" type="checkbox" id="s6" name="Plain rice" value=3.99 />Plain rice</div>
+<div class="price2">&#163;3.99</div>
+
+<div class="food1"><input type="checkbox" class="box" id="s7" name="Slight chips" value=9.50 />Slight chips</div>
+<div class="price1">&#163;9.50</div>
+<div class="food2"><input type="checkbox" class="box" id="s8" name="Ham paste" value=7.99 />Ham paste</div>
+<div class="price2">&#163;7.99</div>
+
+<div class="food1"><input type="checkbox" class="box" id="s9" name="Calamari bits" value=5.20 />Calamari bits</div>
+<div class="price1">&#163;5.20</div>
+<div class="food2"><input type="checkbox" class="box" id="s10" name="Soup of the month (plain)" value=9.65 />Soup of the month</div>
+<div class="price2">&#163;9.65</div>
+</form>
+
+<p class="titleo"><b>Entr&eacute;e:</b></p>
+
+<form id="mainz">
+<div class="food1"><input class="box" type="checkbox" id="m1" name="Roast beef" value=27.99 />Roast beef</div>
+<div class="price1">&#163;27.99</div>
+<div class="food2"><input class="box" type="checkbox" id="m2" name="Boiled goose" value=18.99 />Boiled goose</div>
+<div class="price2">&#163;18.99</div>
+
+<div class="food1"><input class="box" type="checkbox" id="m3" name="Spaghetti bolognese" value=22.99 />Spaghetti bolognese</div>
+<div class="price1">&#163;22.99</div>
+<div class="food2"><input class="box" type="checkbox" id="m4" name="Crumpet tower" value=21.99 />Crumpet tower</div>
+<div class="price2">&#163;21.99</div>
+
+<div class="food1"><input class="box" type="checkbox" id="m5" name="Gourmet toast" value=19.99 />Gourmet toast</div>
+<div class="price1">&#163;19.99</div>
+<div class="food2"><input class="box" type="checkbox" id="m6" name="Triangular pizza" value=21.50 />Triangular pizza</div>
+<div class="price2">&#163;21.50</div>
+
+<div class="food1"><input class="box" type="checkbox" id="m7" name="Pork shapes" value=21.60 />Pork shapes</div>
+<div class="price1">&#163;21.60</div>
+<div class="food2"><input class="box" type="checkbox" id="m8" name="Giant sandwich" value=27.99 />Giant sandwich</div>
+<div class="price2">&#163;27.99</div>
+
+<div class="food1"><input class="box" type="checkbox" id="m9" name="Crouton festival" value=22.50 />Crouton festival</div>
+<div class="price1">&#163;22.50</div>
+<div class="food2"><input class="box" type="checkbox" id="m10" name="Chicken squares" value=29.99 />Chicken squares</div>
+<div class="price2">&#163;29.99</div>
+</form>
+
+<p class="titleo"><b>Dessert:</b></p>
+
+<form id="dessertz">
+<div class="food1"><input class="box" type="checkbox" id="aft1" name="Chocolate bombs" value=5.99 />Chocolate bombs</div>
+<div class="price1">&#163;5.99</div>
+<div class="food2"><input class="box" type="checkbox" id="aft2" name="Vanilla ice cream" value=3.99 />Vanilla ice cream</div>
+<div class="price2">&#163;3.99</div>
+
+<div class="food1"><input class="box" type="checkbox" id="aft3" name="Chocolate goo cake" value=5.99 />Chocolate goo cake</div>
+<div class="price1">&#163;5.99</div>
+<div class="food2"><input class="box" type="checkbox" id="aft4" name="Marzipan special" value=5.99 />Marzipan special</div>
+<div class="price2">&#163;5.99</div>
+
+<div class="food1"><input class="box" type="checkbox" id="aft5" name="Apple pie" value=5.50 />Apple pie</div>
+<div class="price1">&#163;5.50</div>
+<div class="food2"><input class="box" type="checkbox" id="aft6" name="Lemon burst" value=5.99 />Lemon burst</div>
+<div class="price2">&#163;5.99</div>
+
+<div class="food1"><input class="box" type="checkbox" id="aft7" name="Marshmallow bash" value=5.25 />Marshmallow bash</div>
+<div class="price1">&#163;5.25</div>
+<div class="food2"><input class="box" type="checkbox" id="aft8" name="Tinned pineapple" value=7.50 />Tinned pineapple</div>
+<div class="price2">&#163;7.50</div>
+</form>
+
+<p class="titleo"><b>Drinks:</b></p>
+
+<form id="drinkz">
+<div class="food1"><input class="box" type="checkbox" id="dr1" name="Glass of water" onchange="listy(dr1,sel1,area1)" />
+<input class="box" type="checkbox" id="drmob1" name="Glass of water" onchange="listy(drmob1,selmob1)" />
+Glass of water</div>
+<div class="price1">&#163;3.99</div>
+<!-- FOR MOBILES!! --><select id="selmob1">
+<option value=3.99 label="Tap water (x1)">1</option>
+<option value=7.98 label="Tap water (x2)">2</option>
+<option value=11.97 label="Tap water (x3)">3</option>
+<option value=15.96 label="Tap water (x4)">4</option>
+<option value=19.95 label="Tap water (x5)">5</option>
+</select>
+<div class="food2"><input class="box" type="checkbox" id="dr2" name="Orange juice" value=2.99 onchange="listy(dr2,sel2,area2)" />
+<input class="box" type="checkbox" id="drmob2" name="Orange juice" value=2.99 onchange="listy(drmob2,selmob2)" />
+Orange Juice</div>
+
+<div class="price2">&#163;2.99</div>
+<!-- FOR MOBILES!! --> <select id="selmob2">
+<option value=3.99 label="Orange juice (x1)">1</option>
+<option value=5.98 label="Orange juice (x2)">2</option>
+<option value=8.97 label="Orange juice (x3)">3</option>
+<option value=11.96 label="Orange juice (x4)">4</option>
+<option value=14.95 label="Orange juice (x5)">5</option>
+</select>
+<div id="area1">
+<select id="sel1">
+<option value=3.99 label="Tap water (x1)">1</option>
+<option value=7.98 label="Tap water (x2)">2</option>
+<option value=11.97 label="Tap water (x3)">3</option>
+<option value=15.96 label="Tap water (x4)">4</option>
+<option value=19.95 label="Tap water (x5)">5</option>
+</select>
+</div>
+
+<div id="area2">
+<select id="sel2">
+<option value=2.99 label="Orange juice (x1)">1</option>
+<option value=5.98 label="Orange juice (x2)">2</option>
+<option value=8.97 label="Orange juice (x3)">3</option>
+<option value=11.96 label="Orange juice (x4)">4</option>
+<option value=14.95 label="Orange juice (x5)">5</option>
+</select>
+</div>
+
+
+<div class="food1"><input class="box" type="checkbox" id="dr3" name="Smirnoff Ice" value=2.99 onchange="listy(dr3,sel3,area3)" />
+<input class="box" type="checkbox" id="drmob3" name="Smirnoff Ice" value=2.99 onchange="listy(drmob3,selmob3)" />
+Smirnoff Ice</div>
+<div class="price1">&#163;2.99</div>
+
+<!-- FOR MOBILES!! --> <select id="selmob3">
+<option value=2.99 label="Smirnoff Ice (x1)">1</option>
+<option value=5.98 label="Smirnoff Ice (x2)">2</option>
+<option value=8.97 label="Smirnoff Ice (x3)">3</option>
+<option value=11.96 label="Smirnoff Ice (x4)">4</option>
+<option value=14.95 label="Smirnoff Ice (x5)">5</option>
+</select>
+<div class="food2"><input class="box" type="checkbox" id="dr4" name="Barcardi Breezer" value=2.99 onchange="listy(dr4,sel4,area4)" />
+<input class="box" type="checkbox" id="drmob4" name="Barcardi Breezer" value=2.99 onchange="listy(drmob4,selmob4)" />
+Barcardi Breezer</div>
+<div class="price2">&#163;2.99</div>
+<!-- FOR MOBILES!! --> <select id="selmob4">
+<option value=2.99 label="Barcardi Breezer (x1)">1</option>
+<option value=5.98 label="Barcardi Breezer (x2)">2</option>
+<option value=8.97 label="Barcardi Breezer (x3)">3</option>
+<option value=11.96 label="Barcardi Breezer (x4)">4</option>
+<option value=14.95 label="Barcardi Breezer (x5)">5</option>
+</select>
+
+<div id="area3">
+<select id="sel3">
+<option value=2.99 label="Smirnoff Ice (x1)">1</option>
+<option value=5.98 label="Smirnoff Ice (x2)">2</option>
+<option value=8.97 label="Smirnoff Ice (x3)">3</option>
+<option value=11.96 label="Smirnoff Ice (x4)">4</option>
+<option value=14.95 label="Smirnoff Ice (x5)">5</option>
+</select>
+</div>
+
+<div id="area4">
+<select id="sel4">
+<option value=2.99 label="Barcardi Breezer (x1)">1</option>
+<option value=5.98 label="Barcardi Breezer (x2)">2</option>
+<option value=8.97 label="Barcardi Breezer (x3)">3</option>
+<option value=11.96 label="Barcardi Breezer (x4)">4</option>
+<option value=14.95 label="Barcardi Breezer (x5)">5</option>
+</select>
+</div>
+
+<div class="food1"><input class="box" type="checkbox" id="dr5" name="ASDA beer" value=4.99 onchange="listy(dr5,sel5,area5)" />
+<input class="box" type="checkbox" id="drmob5" name="ASDA beer" value=4.99 onchange="listy(drmob5,selmob5)" />
+ASDA beer</div>
+<div class="price1">&#163;4.99</div>
+
+<!-- FOR MOBILES!! --> <select id="selmob5">
+<option value=4.99 label="ASDA beer (x1)">1</option>
+<option value=9.98 label="ASDA beer (x2)">2</option>
+<option value=14.97 label="ASDA beer (x3)">3</option>
+<option value=19.96 label="ASDA beer (x4)">4</option>
+<option value=24.95 label="ASDA beer (x5)">5</option>
+</select>
+
+<div class="food2"><input class="box" type="checkbox" id="dr6" name="Glass of wine" value=2.99 onchange="listy(dr6,sel6,area6)" />
+<input class="box" type="checkbox" id="drmob6" name="Glass of wine" value=2.99 onchange="listy(drmob6,selmob6)" />
+Glass of wine</div>
+
+<div class="price2">&#163;2.99</div>
+
+<!-- FOR MOBILES!! --> <select id="selmob6">
+<option value=2.99 label="Glass of wine (x1)">1</option>
+<option value=5.98 label="Glass of wine (x2)">2</option>
+<option value=8.97 label="Glass of wine (x3)">3</option>
+<option value=11.96 label="Glass of wine (x4)">4</option>
+<option value=14.95 label="Glass of wine (x5)">5</option>
+</select>
+
+<div id="area5">
+<select id="sel5">
+<option value=4.99 label="ASDA beer (x1)">1</option>
+<option value=9.98 label="ASDA beer (x2)">2</option>
+<option value=14.97 label="ASDA beer (x3)">3</option>
+<option value=19.96 label="ASDA beer (x4)">4</option>
+<option value=24.95 label="ASDA beer (x5)">5</option>
+</select>
+</div>
+
+
+<div id="area6">
+<select id="sel6">
+<option value=2.99 label="Glass of wine (x1)">1</option>
+<option value=5.98 label="Glass of wine (x2)">2</option>
+<option value=8.97 label="Glass of wine (x3)">3</option>
+<option value=11.96 label="Glass of wine (x4)">4</option>
+<option value=14.95 label="Glass of wine (x5)">5</option>
+</select>
+</div>
+</form>
+<div id="brick"></div>
+<p id="oButton" class="oMiddle"><div id="order" type="submit" value="Order" onclick="datey();bisp();bosp();basp();drinko();totally();topLoader()" >Order?</div></p>
+</div>
+
+<div id="overlay">
+</div>
+
+<div id="receipt">
+<p id="shop"><b>*** Plain Wine & Dining Ltd ***</b></p>
+<p id="date"><b></b></p>
+<p id="dishList"></p>
+<p id="priceList"></p>
+<p id="priceTotal"></p>
+<br>
+<p id="thanks"><b>*** Thank You ***</b></p>
+<p id="close" onclick="closey()">(Close)</p>
+</div>
+
+
+</body>
+</html>
